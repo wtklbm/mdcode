@@ -1,0 +1,220 @@
+# `Git` 忽略文件
+
+### Node.js
+
+node_modules
+dist
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# 诊断报告
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# 运行时数据
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# jscoverage/JSCover 生成的已检测库的目录
+lib-cov
+
+# 测试工具
+coverage
+*.lcov
+.nyc_output
+
+# Grunt
+.grunt
+
+# Bower
+bower_components
+
+# 节点 waf 配置
+.lock-wscript
+
+# 编译的二进制扩展程序
+build/Release
+
+# 依赖目录
+jspm_packages/
+
+# TypeScript v1 声明文件
+typings/
+
+# TypeScript 缓存
+*.tsbuildinfo
+
+# 可选的 npm 缓存目录
+.npm
+
+# 可选的 eslint 缓存
+.eslintcache
+
+# 可选的 REPL 历史记录
+.node_repl_history
+
+# 'npm pack' 的输出
+*.tgz
+
+# Yarn 完整性文件
+.yarn-integrity
+
+# dotenv 环境变量文件
+.env
+.env.test
+
+# 包裹捆绑式缓存
+.cache
+
+# next.js 建立输出
+.next
+
+# nuxt.js 建立输出
+.nuxt
+
+# 构建输出
+.out
+.storybook-out
+
+# Vuepress 构建输出
+.vuepress/dist
+
+# 无服务器目录
+.serverless/
+
+# FuseBox 缓存
+.fusebox/
+
+# DynamoDB 本地文件
+.dynamodb/
+
+# 临时文件夹
+tmp/
+temp/
+
+
+# logs
+npm-debug.log
+
+
+### VisualStudioCode
+.VSCodeCounter/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+
+### JetBrains
+.idea_modules/
+.idea
+*.iml
+*.ipr
+
+# CMake
+cmake-build-*/
+
+
+# 基于文件的项目格式
+*.iws
+
+out/
+
+# JIRA 插件
+atlassian-ide-plugin.xml
+
+# Crashlytics 插件 (用于 Android Studio 和 IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+
+### Linux
+
+*~
+
+# 如果进程仍具有打开已删除文件的句柄时可以创建的临时文件
+.fuse_hidden*
+
+# KDE 目录首选项
+.directory
+
+# Linux 可能出现在任何分区或磁盘上的垃圾箱文件夹
+.Trash-*
+
+# .nfs 当打开的文件被删除但仍在访问时创建文件
+.nfs*
+
+# 为了安全起见，请勿发布以下文件
+system/expressionengine/config/database.php
+system/expressionengine/config/config.php
+
+
+### macOS
+
+.AppleDouble
+.LSOverride
+.DS_Store
+
+# 图标必须以两个 \r 结尾
+Icon
+
+# Thumbnails
+._*
+
+# 可能出现在卷根目录中的文件
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# 可能在远程 AFP 共享上创建的目录
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Caches
+sized/
+thumbs/
+_thumbs/
+*/expressionengine/cache/*
+
+
+### Windows
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# 转储文件
+*.stackdump
+
+# 文件夹配置文件
+[Dd]esktop.ini
+
+# 文件共享上使用的回收站
+$RECYCLE.BIN/
+
+# Windows 安装程序文件
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows 快捷方式
+*.lnk
