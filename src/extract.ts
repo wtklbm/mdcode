@@ -10,7 +10,7 @@ export default async function extract(pathString: string, projectName: string) {
     const mdLines = await readlineStream(pathString).catch(() => []);
 
     if (!isArrayHave(mdLines)) {
-        return printError('[merge]: 在提取之前，文档必须要存在');
+        return printError('[extract]: 在提取之前，文档必须要存在');
     }
 
     const { lines, codes } = await handleCodes(
