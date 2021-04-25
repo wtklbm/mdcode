@@ -1,0 +1,40 @@
+{
+    // 编译选项
+    "compilerOptions": {
+        // 编译后的目标版本，默认为 `ES3`
+        "target": "esnext",
+        // 编译后的模块样式，分为 `commonjs` 和 `ES6` 等
+        "module": "commonjs",
+        "lib": ["esnext", "DOM"],
+        // 是否启用严格模式，严格模式下 `TS` 校验最完整
+        "strict": true,
+        //`ES6` 模块和 `commonjs` 模块是否可以相互引用
+        "esModuleInterop": true,
+        "noImplicitAny": true,
+        // 允许独立的模块存在，这样文件中就不用写export语句了
+        // 如果为true的话，文件中没有export语句则会报错
+        "isolatedModules": false,
+        // 代码映射
+        "sourceMap": true,
+        // 编译 `JS` 文件
+        "allowJs": true,
+        // 报告 `JS` 中的错误
+        "checkJs": true,
+        "baseUrl": ".",
+        // 打包的输出目录，然后在调试时就执行 `dist` 目录，而不是 `src` 目录
+        "outDir": "dist",
+        // 生成类型声明文件
+        "declaration": false,
+        // 导入 `JSON` 模块
+        "resolveJsonModule": true,
+        // 装饰器
+        "experimentalDecorators": true,
+        // - preserve: 保留 `jsx` 语法，保留 `tsx` 后缀
+        // - react-native: 保留 `jsx` 语法，后缀改为 `js`
+        // - react: 不保留 `jsx` 语法直接编译成 `ES5`，后缀改为 `js`
+        "jsx": "react"
+    },
+    "include": ["src", "app", "packages"],
+    "exclude": ["node_modules"],
+    "compileOnSave": true
+}
