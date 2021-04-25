@@ -1,0 +1,43 @@
+{
+    "name": "mdcode",
+    "version": "0.0.1",
+    "homepage": "https://github.com/wtklbm/mdcode",
+    "author": {
+        "name": "wtklbm",
+        "email": "wtklbm@gmail.com",
+        "url": "https://github.com/wtklbm"
+    },
+    "contributors": [],
+    "description": "None",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "license": "MIT",
+    "engines": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wtklbm/mdcode.git"
+    },
+    "bugs": {
+        "url": "https://github.com/wtklbm/mdcode/issues"
+    },
+    "keywords": [],
+    "bin": {
+        "mdcode": "./dist/index.js"
+    },
+    "scripts": {
+        "test": "jest --verbose --runInBand --coverage",
+        "prettier": "prettier --config ./.prettierrc.js --write \"{app,src,packages,test,__{tests,mocks}__}/**/*.{js,ts,jsx,tsx,node,mjs,es,es6,vue,less,sass,scss,json,html}\""
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.41",
+        "typescript": "^4.2.4"
+    },
+    "dependencies": {
+        "@curong/fs": "0.0.0-alpha.2",
+        "@curong/regexp": "0.0.0-alpha.2",
+        "@curong/term": "0.0.0-alpha.2",
+        "@curong/types": "0.0.0-alpha.2"
+    }
+}
