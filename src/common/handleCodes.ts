@@ -1,10 +1,12 @@
-import { isZero } from '@curong/types';
 import { join } from 'path';
+
+import { isZero } from '@curong/types';
+import { mapReplace } from '@curong/regexp';
 
 import {
     codeTemplateStartReg,
     CODE_TAG,
-    commentTitleReg,
+    commentTitleRegexps,
     pathReg
 } from '../constants';
 
@@ -72,7 +74,8 @@ export default async function handleCodes(
 
                 newLines.push(head);
 
-                let path = head.trim().replace(commentTitleReg, '');
+                let path = mapReplace(commentTitleRegexps, head.trim(), '$1');
+                path = join('.', path.trim());
 
                 if ((m = pathReg.exec(path))) {
                     path = m[0];
@@ -82,7 +85,7 @@ export default async function handleCodes(
                     }
 
                     await callback({
-                        path: join('.', path).replace(/\\/g, '/'),
+                        path: path.replace(/\\/g, '/'),
                         codeMap,
                         codes,
                         head,
