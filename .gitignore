@@ -1,5 +1,7 @@
 # `Git` 忽略文件
 
+debug
+
 ### Node.js
 
 node_modules
