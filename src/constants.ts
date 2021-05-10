@@ -19,7 +19,14 @@ export const commentTitleRegexps = [
 export const pathReg = /^(?:([\\/]|\$[-a-z0-9_]+:)?[-a-z0-9]+|[.]{1,2}|[a-z]+:[\\/]?)(?:[/\\][-a-z0-9+&@#%?=~_|!:,;.]+)+([a-z0-9]|[\\/])/gi;
 
 export const ignoreFiles = new Set(
-    ['.gitignore', 'LICENSE', 'package-lock.json'].map(v => v.toLowerCase())
+    [
+        '.gitignore',
+        '.DS_Store',
+        'LICENSE',
+        'package-lock.json',
+        'yarn.lock',
+        'Cargo.lock'
+    ].map(v => v.toLowerCase())
 );
 
-export const ignoreReg = /^(dist|.git|.idea|.DS_Store|node_modules)[\\/]/;
+export const ignoreReg = /^(dist|.git|.idea|node_modules|target)[\\/]/;
