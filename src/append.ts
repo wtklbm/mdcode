@@ -1,5 +1,6 @@
 import { extname, basename, relative } from 'path';
 
+import { isNotZero } from '@curong/types';
 import { fileList, readFile, writeFile } from '@curong/fs';
 
 import { CODE_TAG, ignoreFiles, ignoreReg } from './constants';
@@ -59,7 +60,7 @@ export default async function append(mdPath: string, projectPath: string) {
 
     for (let i = 0, len = files.length; i < len; i++) {
         const filePath = files[i];
-        const content = await readFile(filePath);
+        const content = (await readFile(filePath)).trim();
         const relativePath = relative(projectPath, filePath);
 
         if (
@@ -69,10 +70,13 @@ export default async function append(mdPath: string, projectPath: string) {
             continue;
         }
 
-        codes.push(appendCodeTemplate(content.trimEnd(), relativePath));
+        if (isNotZero(content.length)) {
+            codes.push(appendCodeTemplate(content, relativePath));
+        }
     }
 
-    const content = (await readFile(mdPath).catch(() => '')) + codes.join('\n');
+    const body = (await readFile(mdPath).catch(() => '')).trimEnd();
+    const content = body + codes.join('\n');
 
     await writeFile(mdPath, content);
 }
