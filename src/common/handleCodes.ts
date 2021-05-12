@@ -78,7 +78,7 @@ export default async function handleCodes(
                 path = join('.', path.trim());
 
                 if ((m = pathReg.exec(path))) {
-                    path = m[0];
+                    path = m[0].trim();
 
                     if (projectPath) {
                         path = join(projectPath, path);
