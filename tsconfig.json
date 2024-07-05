@@ -2,13 +2,13 @@
     // 编译选项
     "compilerOptions": {
         // 编译后的目标版本，默认为 `ES3`
-        "target": "esnext",
+        "target": "ESNext",
         // 编译后的模块样式，分为 `commonjs` 和 `ES6` 等
-        "module": "commonjs",
-        "lib": ["esnext", "DOM"],
+        "module": "NodeNext",
+        "lib": ["ESNext", "DOM"],
         // 是否启用严格模式，严格模式下 `TS` 校验最完整
         "strict": true,
-        //`ES6` 模块和 `commonjs` 模块是否可以相互引用
+        // `ESNext` 模块和 `CommonJS` 模块是否可以相互引用
         "esModuleInterop": true,
         "noImplicitAny": true,
         // 允许独立的模块存在，这样文件中就不用写export语句了
